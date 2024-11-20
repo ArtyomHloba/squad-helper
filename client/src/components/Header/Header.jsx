@@ -110,11 +110,6 @@ class Header extends React.Component {
           <a href='http://www.google.com'>Read Announcement</a>
         </div>
         <div className={styles.loginSignnUpHeaders}>
-          {/* <div className={styles.numberContainer}>
-            <img src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`} alt='phone' />
-            <span>{TEL}</span>
-          </div> */}
-
           <div className={styles.numberContainer}>
             <img src={`${CONSTANTS.STATIC_IMAGES_PATH}phone.png`} alt='phone' />
             <a href={`tel:${TEL}`} className={styles.phoneLink}>
