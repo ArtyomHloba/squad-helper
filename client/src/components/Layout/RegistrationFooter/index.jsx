@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './RegistrationFooter.module.sass';
-
+import CONSTANTS from '../../../constants';
+const { TEL } = CONSTANTS.CONTACTS;
 const RegistrationFooter = () => {
   return (
     <div className={styles.footer}>
@@ -87,8 +88,8 @@ const RegistrationFooter = () => {
           <div className={styles.article}>
             Check out our <span className={styles.orangeSpan}>FAQs</span> or
             send us a <span className={styles.orangeSpan}>message</span>. For
-            assistance with launching a contest, you can also call us at (877)
-            355-3585 or schedule a
+            assistance with launching a contest, you can also call us at {TEL}{' '}
+            or schedule a
             <span className={styles.orangeSpan}>Branding Consultation</span>
           </div>
         </div>
