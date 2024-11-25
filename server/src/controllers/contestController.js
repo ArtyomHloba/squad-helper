@@ -300,7 +300,7 @@ module.exports.getContests = async (req, res, next) => {
       limit,
       offset = 0,
       ownEntries,
-    } = req;
+    } = req.query;
 
     const predicates = UtilFunctions.createWhereForAllContests(
       typeIndex,
