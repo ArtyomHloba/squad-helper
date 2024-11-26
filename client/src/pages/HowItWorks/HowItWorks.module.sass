@@ -55,7 +55,6 @@
     aspect-ratio: 16 / 9
     border: none
 
-// ====================================================================
 .waysToUseAtomSection
     background-color: #f8fbff
     padding: 40px 20px
@@ -127,8 +126,6 @@
     &:hover
         background-color: #2d6cd3
 
-//=============================================================
-
 .namingContests
     padding: 40px
     text-align: center
@@ -198,7 +195,7 @@
     font-size: 14px
     color: #555a64
     line-height: 1.5
-// =====================================================
+
 .faq
     text-align: center
     margin: 40px 0
@@ -242,7 +239,6 @@
         padding: 10px 20px
         font-size: 14px
 
-//=========================================================
 .faqSection
     margin: 40px auto
     max-width: 800px
@@ -291,3 +287,77 @@
     font-size: 30px
     font-weight: 100
     color: #377dff
+
+.searchContainer
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 60px 20px
+    margin: 100px 0 100px 0
+    background-color: #ffffff
+
+.searchBar
+    display: flex
+    align-items: center
+    width: 100%
+    max-width: 600px
+    border: 1px solid transparent
+    border-radius: 50px
+    padding: 5px
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, #6cc1ff, #e459ff) border-box
+
+.input
+    flex: 1
+    border: none
+    outline: none
+    padding: 5px 5px
+    border-radius: 50px
+    font-size: 16px
+    color: #8a8a8a
+
+    &::placeholder
+        color: #c7c7c7
+
+.searchButton
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: #ff6a3d
+    border: none
+    padding: 5px 10px 3px 10px
+    border-radius: 50%
+    cursor: pointer
+    transition: transform 0.2s, box-shadow 0.3s
+
+    &:hover
+        transform: scale(1.1)
+        box-shadow: 0 5px 10px rgba(255, 109, 109, 0.5)
+
+.searchIcon
+    color: white
+    font-size: 25px
+
+.searchIconBlack
+    color: black
+    font-size: 25px
+
+.categories
+    display: flex
+    flex-wrap: wrap
+    gap: 15px
+    margin-top: 25px
+
+.category
+    background-color: #E9E9F6
+    border: none
+    color: #6610f2
+    padding: 8px 10px
+    border-radius: 25px
+    font-size: 14px
+    font-weight: 500
+    cursor: pointer
+    transition: background-color 0.3s
+
+    &:hover
+        background-color: #FFFF

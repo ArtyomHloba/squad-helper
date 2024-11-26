@@ -1,3 +1,4 @@
+import { CiSearch } from 'react-icons/ci';
 import styles from './HowItWorks.module.sass';
 import lighting from './icons/lighting.svg';
 import pc from './icons/pc.svg';
@@ -279,6 +280,33 @@ function HowItWorks () {
                 </button>
               </li>
             </ul>
+          </div>
+        </section>
+
+        <section className={styles.searchContainer}>
+          <div className={styles.searchBar}>
+            <span className={styles.searchIconBlack}>
+              <CiSearch />
+            </span>
+            <input
+              type='text'
+              placeholder='Search Over 200,000+ Premium Names'
+              className={styles.input}
+            />
+            <button className={styles.searchButton}>
+              <span className={styles.searchIcon}>
+                <CiSearch />
+              </span>
+            </button>
+          </div>
+          <div className={styles.categories}>
+            <button className={styles.category}>Tech</button>
+            <button className={styles.category}>Clothing</button>
+            <button className={styles.category}>Finance</button>
+            <button className={styles.category}>Real Estate</button>
+            <button className={styles.category}>Crypto</button>
+            <button className={styles.category}>Short</button>
+            <button className={styles.category}>One Word</button>
           </div>
         </section>
       </main>
