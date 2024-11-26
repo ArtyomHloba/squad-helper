@@ -226,6 +226,60 @@ function HowItWorks () {
               </li>
             </ul>
           </div>
+
+          <div className={styles.faqCategory}>
+            <h3 className={styles.faqTitle}>Managed Contests</h3>
+            <ul className={styles.faqList}>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  What are Managed Contests?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  What's a typical timeline for a Managed Contest?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  How much do Managed Contests cost?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  Where are the Branding Consultants located?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.faqCategory}>
+            <h3 className={styles.faqTitle}>For Creatives</h3>
+            <ul className={styles.faqList}>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  Can anyone join your platform?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  Can I start participating immediately upon signing up?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  How Do I Get Paid?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+            </ul>
+          </div>
         </section>
       </main>
     </>

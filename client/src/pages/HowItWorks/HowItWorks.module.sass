@@ -1,3 +1,6 @@
+.mainPage
+    box-sizing: border-box
+
 .howItWorksSection
     max-width: 1200px
     min-width: 300px
@@ -7,11 +10,9 @@
     justify-content: space-between
     align-items: center
     padding: 20px 0 30px 0
-    gap: 20px
     @media (max-width: 768px)
         flex-direction: column
         text-align: center
-        gap: 10px
 
 .howItWorksText
     flex: 1
@@ -227,7 +228,7 @@
 .tab
     text-decoration: none
     border-radius: 20px
-    padding: 20px 20px
+    padding: 20px 25px
     font-size: 16px
     font-weight: 600
     color: #555
@@ -245,32 +246,33 @@
 .faqSection
     margin: 40px auto
     max-width: 800px
-    font-family: 'Arial', sans-serif
 
 .faqCategory
     margin-bottom: 40px
 
 .faqTitle
-    font-size: 20px
+    font-size: 28px
     color: #377dff
-    font-weight: 600
+    font-weight: 700
     margin-bottom: 20px
+    padding: 0 0 0 5px
 
 .faqList
-    list-style: none
-    padding: 0
+    padding: 0 10px 0 10px
 
 .faqItem
-    margin-bottom: 10px
+    margin-bottom: 30px
     border: 1px solid #e6e6e6
-    border-radius: 8px
+    border-radius: 16px
     overflow: hidden
+    &:hover
+        border: 1px solid #377dff
 
 .faqButton
     width: 100%
-    padding: 15px 20px
-    font-size: 16px
-    font-weight: 400
+    padding: 30px
+    font-size: 20px
+    font-weight: 700
     color: #19184a
     background: #fff
     text-align: left
@@ -280,11 +282,12 @@
     align-items: center
     cursor: pointer
     transition: background-color 0.3s ease
-
     &:hover
-        background-color: #f8f8f8
+        background-color: #EAF2FE
+    @media (max-width: 600px)
+        font-size: 16px
 
 .faqIcon
-    font-size: 18px
-    font-weight: bold
+    font-size: 30px
+    font-weight: 100
     color: #377dff
