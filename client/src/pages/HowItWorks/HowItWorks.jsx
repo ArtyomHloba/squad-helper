@@ -119,6 +119,114 @@ function HowItWorks () {
             </div>
           </div>
         </section>
+
+        <section className={styles.faq}>
+          <h2 className={styles.title}>Frequently Asked Questions</h2>
+          <nav className={styles.tabs}>
+            <div className={styles.tabsContainer}>
+              <a href='#' className={`${styles.tab} ${styles.active}`}>
+                Launching A Contest
+              </a>
+              <a href='#' className={styles.tab}>
+                Buying From Marketplace
+              </a>
+              <a href='#' className={styles.tab}>
+                Managed Contests
+              </a>
+              <a href='#' className={styles.tab}>
+                For Creatives
+              </a>
+            </div>
+          </nav>
+        </section>
+
+        <section className={styles.faqSection}>
+          <div className={styles.faqCategory}>
+            <h3 className={styles.faqTitle}>Launching A Contest</h3>
+            <ul className={styles.faqList}>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  How long does it take to start receiving submissions?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  How long do Naming Contests last?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  Where are the creatives located?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  What if I do not like any submissions?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  How much does it cost?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  I need both a Name and a Logo. Do you offer any discount for
+                  multiple contests?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  What if I want to keep my business idea private?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  Can you serve customers outside the US?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  Can I see any examples?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div className={styles.faqCategory}>
+            <h3 className={styles.faqTitle}>Buying From Marketplace</h3>
+            <ul className={styles.faqList}>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  What's included with a Domain Purchase?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  How does the Domain transfer process work?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+              <li className={styles.faqItem}>
+                <button className={styles.faqButton}>
+                  If I purchase a Domain on installments, can I start using it
+                  to setup my website?
+                  <span className={styles.faqIcon}>+</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
     </>
   );
