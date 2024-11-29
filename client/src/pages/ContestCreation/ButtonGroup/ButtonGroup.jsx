@@ -8,7 +8,6 @@ function ButtonGroup () {
 
   const handleClick = id => {
     setSelectedId(id);
-    ы;
   };
 
   return (
