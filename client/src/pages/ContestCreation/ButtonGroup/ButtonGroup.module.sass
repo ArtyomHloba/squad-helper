@@ -1,0 +1,63 @@
+.buttonGroup
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+.title
+    font-size: 20px
+    font-weight: bold
+    margin-bottom: 16px
+
+.buttons
+    display: flex
+    gap: 16px
+
+.button
+    background-color: #f7f7f7
+    border: 2px solid #ccc
+    border-radius: 8px
+    padding: 16px
+    flex: 1
+    text-align: left
+    cursor: pointer
+    transition: all 0.3s ease
+    position: relative
+
+    &:hover
+        background-color: #ececec
+
+    &.active
+        border-color: #007bff
+
+.labelContainer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 8px
+    position: relative
+
+.label
+    font-weight: bold
+    font-size: 16px
+
+.recommended
+    position: absolute
+    top: -33px
+    right: 60px
+    background-color: #DEEAFE
+    color: #007bff
+    padding: 3.2px 8px
+    border-radius: 4px
+    font-size: 12px
+    white-space: nowrap
+
+.description
+    font-size: 14px
+    color: #666
+
+.checkIcon
+    position: absolute
+    top: 10px
+    right: 10px
+    color: #007bff
+    font-size: 16px
