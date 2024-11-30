@@ -63,3 +63,22 @@ DROP TABLE IF EXISTS public."Catalogs" CASCADE;
 SELECT role, COUNT(*) AS user_count
 FROM public."Users"
 GROUP BY role;
+
+--Завдання 8 
+-- Усім юзерам з роллю customer, які здійснювали замовлення в 
+-- новорічні свята в період з 25.12 по 14.01 (беремо до уваги два роки найближчі до вказаних дат), необхідно зарахувати 
+-- по 10% кешбеку з усіх замовлень у цей період.
+WITH holiday_orders AS (SELECT c."userId", SUM(c.prize) * 0.1 AS cashback
+FROM public."Contests" c
+JOIN public."Users" u ON u.id = c."userId"
+WHERE u.role = 'customer' AND (
+    (c."createdAt"::date BETWEEN '2022-12-25' AND '2022-12-31') OR
+    (c."createdAt"::date BETWEEN '2023-01-01' AND '2023-01-14') OR
+    (c."createdAt"::date BETWEEN '2023-12-25' AND '2023-12-31') OR
+    (c."createdAt"::date BETWEEN '2024-01-01' AND '2024-01-14')
+)
+GROUP BY c."userId" )
+UPDATE public."Users" u
+SET balance = u.balance + ho.cashback
+FROM holiday_orders ho
+WHERE u.id = ho."userId";
