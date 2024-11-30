@@ -57,3 +57,9 @@ DROP TABLE IF EXISTS public."Messages" CASCADE;
 DROP TABLE IF EXISTS public."Conversations" CASCADE;
 DROP TABLE IF EXISTS public."ConversationParticipants" CASCADE;
 DROP TABLE IF EXISTS public."Catalogs" CASCADE;
+
+-- Завдання 7 
+-- Вивести кількість юзерів за ролями {admin: 40, customer: 22, ...}
+SELECT role, COUNT(*) AS user_count
+FROM public."Users"
+GROUP BY role;
