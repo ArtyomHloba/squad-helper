@@ -82,3 +82,26 @@ UPDATE public."Users" u
 SET balance = u.balance + ho.cashback
 FROM holiday_orders ho
 WHERE u.id = ho."userId";
+
+-- Завдання 9
+-- Для ролі сreative необхідно виплатити 3-м юзерам з найвищим рейтингом по 10$ на їхні рахунки.
+
+-- перевірка усіх creators
+SELECT id, "firstName", "lastName", rating, balance
+FROM public."Users"
+WHERE role = 'creator' 
+ORDER BY rating DESC
+LIMIT 3;
+
+
+WITH top_creators AS (
+    SELECT id
+    FROM public."Users"
+    WHERE role = 'creator'
+    ORDER BY rating DESC
+    LIMIT 3
+)
+UPDATE public."Users" u
+SET balance = balance + 10
+FROM top_creators tc
+WHERE u.id = tc.id;
