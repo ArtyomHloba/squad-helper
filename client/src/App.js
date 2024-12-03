@@ -21,6 +21,7 @@ import Layout from './pages/Layout/Layout';
 import OnlyNotAuthorizedUserRoute from './components/Routes/OnlyNotAuthorizedUserRoute/OnlyNotAuthorizedUserRoute';
 import PrivateRoute from './components/Routes/PrivateRoute/PrivateRoute';
 import HowItWorks from './pages/HowItWorks/HowItWorks';
+import Events from './pages/Events/Events';
 
 class App extends Component {
   render () {
@@ -49,6 +50,7 @@ class App extends Component {
 
             <Route element={<PrivateRoute />}>
               <Route path='/payment' element={<Payment />} />
+              <Route path='/events' element={<Events />} />
               <Route path='/startContest' element={<StartContestPage />} />
               <Route
                 path='/startContest/nameContest'
