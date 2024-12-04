@@ -59,57 +59,57 @@ const Events = () => {
 
   return (
     <div className={styles.eventsPage}>
-      <h1>Events</h1>
+      <div className={styles.eventForm}>
+        <form onSubmit={handleSubmit}>
+          <input
+            type='text'
+            name='name'
+            placeholder='Event Name'
+            value={values.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {touched.name && errors.name && (
+            <div className={styles.error}>{errors.name}</div>
+          )}
 
-      <form onSubmit={handleSubmit} className={styles.eventForm}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Event Name'
-          value={values.name}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {touched.name && errors.name && (
-          <div className={styles.error}>{errors.name}</div>
-        )}
+          <input
+            type='date'
+            name='date'
+            value={values.date}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {touched.date && errors.date && (
+            <div className={styles.error}>{errors.date}</div>
+          )}
 
-        <input
-          type='date'
-          name='date'
-          value={values.date}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {touched.date && errors.date && (
-          <div className={styles.error}>{errors.date}</div>
-        )}
+          <input
+            type='time'
+            name='time'
+            value={values.time}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {touched.time && errors.time && (
+            <div className={styles.error}>{errors.time}</div>
+          )}
 
-        <input
-          type='time'
-          name='time'
-          value={values.time}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {touched.time && errors.time && (
-          <div className={styles.error}>{errors.time}</div>
-        )}
+          <input
+            type='number'
+            name='notifyBefore'
+            placeholder='Reminder Time (min)'
+            value={values.notifyBefore}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          {touched.notifyBefore && errors.notifyBefore && (
+            <div className={styles.error}>{errors.notifyBefore}</div>
+          )}
 
-        <input
-          type='number'
-          name='notifyBefore'
-          placeholder='Reminder Time (min)'
-          value={values.notifyBefore}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
-        {touched.notifyBefore && errors.notifyBefore && (
-          <div className={styles.error}>{errors.notifyBefore}</div>
-        )}
-
-        <button type='submit'>Add Event</button>
-      </form>
+          <button type='submit'>Add Event</button>
+        </form>
+      </div>
 
       <div className={styles.eventsList}>
         {events.map(event => (
