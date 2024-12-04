@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useFormik } from 'formik';
+import { IoIosTimer } from 'react-icons/io';
 import Timer from './Timer/Timer';
 import validationSchemas from '../../utils/validators/validationSchems';
 import styles from './Events.module.sass';
@@ -112,6 +113,13 @@ const Events = () => {
       </div>
 
       <div className={styles.eventsList}>
+        <div className={styles.titleContainer}>
+          <h1>Live upcomming checks</h1>
+          <div className={styles.timerContainer}>
+            <p>Remaning time</p>
+            <IoIosTimer className={styles.ioIosTimer} />
+          </div>
+        </div>
         {events.map(event => (
           <Timer
             key={event.eventTime}
