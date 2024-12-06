@@ -1,67 +1,83 @@
 .loginForm
-  width: 600px
+  max-width: 600px
+  width: 100%
   display: flex
   flex-direction: column
   align-items: stretch
   justify-content: center
-  padding: 10px 20px 30px
+  padding: 20px
+  margin: 0 auto
 
   .submitContainer
     align-self: stretch
-    min-width: 260px
-    border-radius: 5px
     display: flex
     justify-content: center
     align-items: center
     background-color: #28d2d0
+    border-radius: 5px
     height: 64px
-    margin-left: 20px
-    padding: 0
-    border: 0
-    width: -moz-available
-    width: -webkit-fill-available
-    margin-right: 20px
-    @media(max-width: 850px)
-      align-self: auto
+    min-width: 260px
+    padding: 0 20px
+    border: none
+    cursor: pointer
+    text-align: center
+    color: white
+    font-size: 16px
+    font-weight: bold
+    letter-spacing: 0.5px
+    margin: 0 auto
 
+    @media (max-width: 850px)
+      height: 56px
+      font-size: 15px
+      padding: 0 15px
+      min-width: 200px
+
+    @media (max-width: 480px)
+      height: 48px
+      font-size: 14px
+      padding: 0 10px
+      min-width: 200px
 
   .inscription
     font-size: 16px
     color: white
+    text-align: center
 
   .inputContainer
     display: flex
     flex-direction: column
     justify-content: center
     align-self: stretch
-    margin-right: 20px
-    margin-left: 20px
+    margin: 0 20px
 
     .fieldWarning
       font-size: 15px
       display: flex
-      flex-direction: row
       justify-content: center
       align-items: center
       color: white
-      border: 1px solid #b72522
+      background-color: #b72522
+      border-radius: 4px
       margin-bottom: 15px
-      padding-bottom: 5px
-      padding-top: 5px
+      padding: 8px
       text-align: center
 
     .input
       background-color: white
-      border: none
+      border: 1px solid #ccc
       border-radius: 4px
       color: #9ca8b7
       font-size: 18px
-      padding: 23px 20px 23px 20px
+      padding: 15px 20px
       outline: none
       margin-bottom: 15px
-      flex: 1
-      @media(max-width: 1400px)
-        align-self: normal
+      width: 100%
+      box-sizing: border-box
+      @media (max-width: 1400px)
+        font-size: 16px
+      @media (max-width: 350px)
+        padding: 10px
 
     .notValid
       border: 2px solid red !important
@@ -69,43 +85,47 @@
     .valid
       border: 2px solid green
 
-
   .error
     align-self: stretch
-    margin-right: 40px
-    margin-left: 40px
+    margin: 20px
     background: red
     color: white
-    font-size: 17px
+    font-size: 16px
     letter-spacing: 0.6px
     border: 1px solid white
     border-radius: 8px
     text-align: center
-    padding-right: 30px
-    padding-left: 30px
-    padding-top: 20px
-    padding-bottom: 20px
-    margin-top: 15px
-    margin-bottom: 20px
-
+    padding: 15px
+    box-sizing: border-box
 
   .errorValid
     font-size: 14px
     text-align: center
     border: 1px solid red
+    border-radius: 4px
     align-self: stretch
-    margin-left: 20px
-    margin-right: 20px
+    margin: 10px 20px
     color: white
-    padding-top: 6px
-    padding-bottom: 6px
-    margin-top: 5px
-    margin-bottom: 15px
+    padding: 6px
 
   h2
     text-align: center
-    font-size: 34px
+    font-size: 32px
     letter-spacing: 0.6px
     color: white
-    margin-top: 20px
-    margin-bottom: 28px
+    margin: 20px auto
+
+@media (max-width: 850px)
+  .loginForm
+    padding: 15px
+
+  .submitContainer
+    margin: 0
+
+@media (max-width: 480px)
+  .loginForm
+    padding: 10px
+
+  .error, .errorValid
+    font-size: 14px
+    padding: 10px
