@@ -23,6 +23,15 @@ const Events = () => {
     );
   };
 
+  const clearExpiredEvents = () => {
+    const activeEvents = events.filter(event => event.eventTime > Date.now());
+    setEvents(activeEvents);
+  };
+
+  const expiredEventsCount = events.filter(
+    event => event.eventTime < Date.now()
+  ).length;
+
   const {
     values,
     touched,
@@ -60,6 +69,12 @@ const Events = () => {
 
   return (
     <div className={styles.eventsPage}>
+      <div className={styles.menuItem}>
+        {expiredEventsCount > 0 && (
+          <span className={styles.badge}>{expiredEventsCount}</span>
+        )}
+      </div>
+
       <div className={styles.eventForm}>
         <form onSubmit={handleSubmit}>
           <input
@@ -69,6 +84,7 @@ const Events = () => {
             value={values.name}
             onChange={handleChange}
             onBlur={handleBlur}
+            className={styles.nameOfEventInput}
           />
           {touched.name && errors.name && (
             <div className={styles.error}>{errors.name}</div>
@@ -80,6 +96,7 @@ const Events = () => {
             value={values.date}
             onChange={handleChange}
             onBlur={handleBlur}
+            className={styles.dateOfEventInput}
           />
           {touched.date && errors.date && (
             <div className={styles.error}>{errors.date}</div>
@@ -91,6 +108,7 @@ const Events = () => {
             value={values.time}
             onChange={handleChange}
             onBlur={handleBlur}
+            className={styles.timeOfEventInput}
           />
           {touched.time && errors.time && (
             <div className={styles.error}>{errors.time}</div>
@@ -103,20 +121,32 @@ const Events = () => {
             value={values.notifyBefore}
             onChange={handleChange}
             onBlur={handleBlur}
+            min={0}
+            className={styles.numberOfEventInput}
           />
           {touched.notifyBefore && errors.notifyBefore && (
             <div className={styles.error}>{errors.notifyBefore}</div>
           )}
+          <div className={styles.btnContainer}>
+            <button className={styles.addBnt} type='submit'>
+              Add Event
+            </button>
 
-          <button type='submit'>Add Event</button>
+            <button
+              onClick={clearExpiredEvents}
+              className={styles.clearExpired}
+            >
+              Clear completed events
+            </button>
+          </div>
         </form>
       </div>
 
       <div className={styles.eventsList}>
         <div className={styles.titleContainer}>
-          <h1>Live upcomming checks</h1>
+          <h1 className={styles.titleEventList}>Live Upcoming Checks</h1>
           <div className={styles.timerContainer}>
-            <p>Remaning time</p>
+            <p className={styles.remainingTime}>Remaining Time</p>
             <IoIosTimer className={styles.ioIosTimer} />
           </div>
         </div>
