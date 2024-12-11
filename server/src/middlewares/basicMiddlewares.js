@@ -3,6 +3,16 @@ const NotFound = require('../errors/UserNotFoundError');
 const RightsError = require('../errors/RightsError');
 const ServerError = require('../errors/ServerError');
 const CONSTANTS = require('../constants');
+const logger = require('../utils/logger');
+
+module.exports.logger = (err, req, res, next) => {
+  logger.error(err.message, { stack: err.stack });
+
+  res.status(err.status || 500).json({
+    message: err.message || 'Internal Server Error',
+    code: err.status || 500,
+  });
+};
 
 module.exports.parseBody = (req, res, next) => {
   req.body.contests = JSON.parse(req.body.contests);
