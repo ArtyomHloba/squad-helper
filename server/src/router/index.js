@@ -8,6 +8,7 @@ const validators = require('../middlewares/validators');
 const chatController = require('../controllers/chatController');
 const upload = require('../utils/fileUpload');
 const contestsRouter = require('./contestsRouter');
+const logger = require('../utils/logger');
 
 const router = express.Router();
 
@@ -86,5 +87,14 @@ router.post('/removeChatFromCatalog', chatController.removeChatFromCatalog);
 router.post('/deleteCatalog', chatController.deleteCatalog);
 
 router.post('/getCatalogs', chatController.getCatalogs);
+
+router.use((err, req, res, next) => {
+  logger.error(err.message, {
+    stack: err.stack,
+    url: req.url,
+    method: req.method,
+  });
+  next(err);
+});
 
 module.exports = router;
