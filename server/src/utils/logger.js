@@ -26,7 +26,6 @@ if (!fs.existsSync(logsDir)) {
   fs.mkdirSync(logsDir);
 }
 
-// Налаштування логера
 const logger = createLogger({
   format: combine(timestamp(), logFormat),
   transports: [
