@@ -1,11 +1,11 @@
 .inputContainer
+  position: relative
   display: flex
   justify-content: flex-start
   align-items: center
   border-top: 1px solid #f3f3f3
   padding: 0 15px
   margin-top: 8px
-  padding-top: 7px
 
   &:last-child
     border: none
@@ -31,7 +31,7 @@
       margin-left: 20px
       cursor: pointer
       top: -15px
-      left: -8px
+      left: -25px
       transition: transform 0.2s ease
       transform: rotate(150deg)
 
@@ -59,7 +59,7 @@
         text-align: center
 
       .notValid
-        border: 1px solid red !important
+        border: 2px solid red !important
 
       .input
         height: 20px
@@ -75,3 +75,9 @@
         &:hover
           transition: border 0.5s
           border-color: #28d2d0
+
+  span
+    position: absolute
+    top: 40px
+    right: 115px
+    color: #b72522
