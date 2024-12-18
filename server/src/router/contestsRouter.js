@@ -32,4 +32,10 @@ contestsRouter.get(
 
 contestsRouter.post('/dataForContest', contestController.dataForContest);
 
+contestsRouter.patch(
+  '/:id',
+  upload.updateContestFile,
+  contestController.updateContest
+);
+
 module.exports = contestsRouter;
