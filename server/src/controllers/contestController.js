@@ -9,10 +9,14 @@ const CONSTANTS = require('../constants');
 module.exports.dataForContest = async (req, res, next) => {
   const response = {};
   try {
-    const {
-      body: { characteristic1, characteristic2 },
-    } = req;
-    console.log(req.body, characteristic1, characteristic2);
+    const { characteristic1, characteristic2 } = req.body;
+
+    if (!characteristic1 && !characteristic2) {
+      return res
+        .status(400)
+        .json({ error: 'At least one characteristic is required' });
+    }
+
     const types = [characteristic1, characteristic2, 'industry'].filter(
       Boolean
     );
@@ -24,19 +28,27 @@ module.exports.dataForContest = async (req, res, next) => {
         },
       },
     });
-    if (!characteristics) {
-      return next(new ServerError());
+
+    if (!characteristics || characteristics.length === 0) {
+      return res
+        .status(404)
+        .json({ error: 'No matching characteristics found' });
     }
-    characteristics.forEach(characteristic => {
-      if (!response[characteristic.type]) {
-        response[characteristic.type] = [];
+
+    characteristics.forEach(({ type, describe }) => {
+      if (!response[type]) {
+        response[type] = [];
       }
-      response[characteristic.type].push(characteristic.describe);
+      response[type].push(describe);
     });
-    res.send(response);
+
+    res.status(200).json(response);
   } catch (err) {
-    console.log(err);
-    next(new ServerError('cannot get contest preferences'));
+    console.error('Error in dataForContest:', err.message, {
+      body: req.body,
+      stack: err.stack,
+    });
+    next(new ServerError('Cannot get contest preferences'));
   }
 };
 

@@ -30,4 +30,6 @@ contestsRouter.get(
   contestController.getContestById
 );
 
+contestsRouter.post('/dataForContest', contestController.dataForContest);
+
 module.exports = contestsRouter;

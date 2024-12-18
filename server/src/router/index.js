@@ -29,8 +29,6 @@ router.use(checkToken.checkToken);
 
 router.use('/contests', contestsRouter);
 
-router.post('/dataForContest', contestController.dataForContest);
-
 router.get('/downloadFile/:fileName', contestController.downloadFile);
 
 router.post(

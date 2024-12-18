@@ -13,7 +13,8 @@ export const payMent = data => http.post('contests', data.formData);
 export const changeMark = data => http.post('changeMark', data);
 export const getPreviewChat = () => http.post('getPreview');
 export const getDialog = data => http.post('getChat', data);
-export const dataForContest = data => http.post('dataForContest', data);
+export const dataForContest = data =>
+  http.post('contests/dataForContest', data);
 export const cashOut = data => http.post('cashout', data);
 export const updateUser = data => http.post('updateUser', data);
 export const newMessage = data => http.post('newMessage', data);
