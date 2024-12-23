@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { IoIosTimer } from 'react-icons/io';
 import EventForm from './../../components/EventForm/EventForm';
 import EventItem from './../../components/EventItem/EventItem';
 import styles from './EventPage.module.sass';
@@ -45,6 +46,14 @@ const EventPage = () => {
       />
 
       <div className={styles.eventsList}>
+        <div className={styles.titleContainer}>
+          <h1 className={styles.titleEventList}>Live Upcoming Checks</h1>
+          <div className={styles.timerContainer}>
+            <p className={styles.remainingTime}>Remaining Time</p>
+            <IoIosTimer className={styles.ioIosTimer} />
+          </div>
+        </div>
+
         {events.map(event => (
           <EventItem
             key={event.eventTime}

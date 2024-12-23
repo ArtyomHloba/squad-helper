@@ -1,3 +1,4 @@
+
 .eventsPage
     display: flex
     flex-direction: column
@@ -6,30 +7,14 @@
     margin: 15px auto
     padding: 0 10px
 
-.eventForm
-    width: 100%
-    max-width: 800px
+.eventsList
     display: flex
     flex-direction: column
-
-    form
-        max-width: 600px
-        display: flex
-        gap: 10px
-        flex-direction: column
-
-    input, button
-        flex: 1 1 100%
-        box-sizing: border-box
-
-.numberOfEventInput,
-.nameOfEventInput,
-.dateOfEventInput,
-.timeOfEventInput
-    padding: 8px 10px
-    font-size: 14px
-    border-radius: 4px
-    border: 1px solid #ccc
+    gap: 15px
+    width: 100%
+    max-width: 800px
+    box-shadow: 0 0 1px gray
+    padding: 25px
 
 .titleContainer
     display: flex
@@ -61,35 +46,11 @@
 .remainingTime
     font-size: 14px
 
-.btnContainer
-    display: flex
-    justify-content: start
-
-.clearExpired,
-.addBnt
-    padding: 10px 0
-    font-size: 14px
-    border-radius: 4px
-    border: 1px solid #ccc
-    cursor: pointer
-    background: #445987
-    color: #fff
-
-.addBnt:hover
-    background-color: darken(#445987, 10%)
-
-.clearExpired:hover
-    background-color: darken(#445987, 10%)
-
 @media (max-width: 768px)
-    .eventsList, .eventForm
+    .eventsList
         padding: 15px
         gap: 10px
 
 @media (max-width: 480px)
     .eventsPage
         padding: 20px
-
-    .clearExpired,
-    .addBnt
-        padding: 10px 0

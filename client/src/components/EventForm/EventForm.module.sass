@@ -1,54 +1,57 @@
-.eventItem
-    background: #E8F5E9
-    border-radius: 8px
-    padding: 10px 15px
+.eventForm
+    width: 100%
+    max-width: 800px
     display: flex
-    justify-content: space-between
-    align-items: center
-    gap: 15px
+    flex-direction: column
 
-    .eventInfo
-        display: flex
-        flex-direction: column
-        gap: 5px
+form
+    margin: 0 auto
+    max-width: 600px
+    display: flex
+    flex-direction: column
+    gap: 10px
 
-        .eventName
-            font-size: 14px
-            font-weight: 600
-            color: #333
+input,
+button
+    padding: 10px
+    font-size: 14px
+    border-radius: 4px
+    border: 1px solid #ccc
 
-    .eventTime
-        font-size: 12px
-        font-weight: 500
-        color: #555
-        margin-left: auto
+.nameOfEventInput,
+.dateOfEventInput,
+.timeOfEventInput,
+.numberOfEventInput
+    width: 300px
+    padding: 8px
 
-    .delete
-        border: none
-        border-radius: 50%
-        width: 30px
-        height: 30px
-        display: flex
-        align-items: center
-        justify-content: center
-        cursor: pointer
-        font-size: 16px
-        background: #E8F5E9
-        color: #333
+.btnContainer
+    display: flex
+    justify-content: flex-start
+    gap: 10px
+
+.addBtn,
+.clearExpired
+    background-color: #445987
+    color: white
+    border: none
+    cursor: pointer
+    transition: background-color 0.3s
+
+.addBtn:hover,
+.clearExpired:hover
+    background-color: #3a4f76
+
+.error
+    color: red
+    font-size: 12px
 
 @media (max-width: 768px)
-    .eventItem
-        padding: 8px 10px
-        justify-content: space-between
+    .btnContainer
+        flex-direction: column
 
-    .eventTime
-        margin-left: 0
-
-@media (max-width: 480px)
-    .eventInfo .eventName
-        font-size: 12px
-
-    .delete
-        width: 25px
-        height: 25px
-        font-size: 14px
+    .nameOfEventInput,
+    .dateOfEventInput,
+    .timeOfEventInput,
+    .numberOfEventInput
+        width: 100%
