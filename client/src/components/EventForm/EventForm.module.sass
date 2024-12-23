@@ -5,10 +5,10 @@
     flex-direction: column
 
 form
-    margin: 0 auto
     max-width: 600px
     display: flex
     flex-direction: column
+    align-items: center
     gap: 10px
 
 input,
@@ -22,25 +22,34 @@ button
 .dateOfEventInput,
 .timeOfEventInput,
 .numberOfEventInput
-    width: 300px
-    padding: 8px
+    width: 100%
 
 .btnContainer
     display: flex
-    justify-content: flex-start
-    gap: 10px
+    justify-content: space-between
+    gap: 15px
+    width: 100%
+    max-width: 600px
 
 .addBtn,
 .clearExpired
+    flex: 1
+    text-align: center
     background-color: #445987
     color: white
+    font-size: 12px
+    font-weight: bold
     border: none
+    border-radius: 8px
+    padding: 12px 0
     cursor: pointer
-    transition: background-color 0.3s
+    transition: background-color 0.3s, box-shadow 0.3s
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
 
 .addBtn:hover,
 .clearExpired:hover
     background-color: #3a4f76
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3)
 
 .error
     color: red
@@ -49,7 +58,8 @@ button
 @media (max-width: 768px)
     .btnContainer
         flex-direction: column
-
+        gap: 10px
+        align-items: stretch
     .nameOfEventInput,
     .dateOfEventInput,
     .timeOfEventInput,

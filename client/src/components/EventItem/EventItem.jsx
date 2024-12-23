@@ -1,4 +1,3 @@
-// EventItem.jsx
 import React from 'react';
 import Countdown from 'react-countdown';
 import { FaTrash } from 'react-icons/fa6';
