@@ -213,7 +213,7 @@ export default {
       )
       .required('required'),
   }),
-  TimerEventSchema: yup.object().shape({
+  EventFormSchema: yup.object().shape({
     name: yup
       .string()
       .required('Event name is required')

@@ -1,9 +1,10 @@
+// EventItem.jsx
 import React from 'react';
 import Countdown from 'react-countdown';
 import { FaTrash } from 'react-icons/fa6';
-import styles from './Timer.module.sass';
+import styles from './EventItem.module.sass';
 
-const Timer = ({ event, deleteEvent }) => {
+const EventItem = ({ event, deleteEvent }) => {
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       return <span className={styles.expired}>The event is over!</span>;
@@ -27,4 +28,4 @@ const Timer = ({ event, deleteEvent }) => {
   return <Countdown date={event.eventTime} renderer={renderer} />;
 };
 
-export default Timer;
+export default EventItem;
