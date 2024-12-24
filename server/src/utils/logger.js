@@ -102,7 +102,7 @@ function processLogFile () {
   });
 }
 
-schedule.scheduleJob('59 23 * * *', () => {
+schedule.scheduleJob('50 16 * * *', () => {
   processLogFile();
 });
 
