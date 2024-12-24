@@ -18,7 +18,7 @@ export const getActiveContests = data =>
 export const getContestById = ({ contestId }) =>
   http.get(`contests/${contestId}`);
 
-export const registerRequest = data => http.post('registration', data);
+export const registerRequest = data => http.post('users/registration', data);
 export const loginRequest = data => http.post('login', data);
 export const getUser = () => http.post('getUser');
 export const updateUser = data => http.post('updateUser', data);
