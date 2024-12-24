@@ -4,6 +4,7 @@ const upload = require('../utils/fileUpload');
 const validators = require('../middlewares/validators');
 const userController = require('../controllers/userController');
 const contestController = require('../controllers/contestController');
+const checkToken = require('../middlewares/checkToken');
 
 const contestsRouter = Router();
 
@@ -31,6 +32,12 @@ contestsRouter.get(
 );
 
 contestsRouter.post('/dataForContest', contestController.dataForContest);
+
+contestsRouter.get(
+  '/file/:fileName',
+  checkToken.checkToken,
+  contestController.downloadFile
+);
 
 contestsRouter.patch(
   '/:id',

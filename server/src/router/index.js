@@ -29,8 +29,6 @@ router.use(checkToken.checkToken);
 
 router.use('/contests', contestsRouter);
 
-router.get('/downloadFile/:fileName', contestController.downloadFile);
-
 router.post(
   '/setNewOffer',
   upload.uploadLogoFiles,

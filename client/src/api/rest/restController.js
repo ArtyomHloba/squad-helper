@@ -9,7 +9,7 @@ export const updateContest = data =>
 export const setNewOffer = data => http.post('setNewOffer', data);
 export const setOfferStatus = data => http.post('setOfferStatus', data);
 export const downloadContestFile = data =>
-  http.get(`downloadFile/${data.fileName}`);
+  http.get('/contests/file/' + data.fileName);
 export const payMent = data => http.post('contests', data.formData);
 export const changeMark = data => http.post('changeMark', data);
 export const getPreviewChat = () => http.post('getPreview');
