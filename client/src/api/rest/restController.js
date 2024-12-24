@@ -6,10 +6,10 @@ export const loginRequest = data => http.post('login', data);
 export const getUser = () => http.post('getUser');
 export const updateContest = data =>
   http.patch(`contests/${data.get('contestId')}`, data);
-export const setNewOffer = data => http.post('setNewOffer', data);
+export const setNewOffer = data => http.post('contests/createOffer', data);
 export const setOfferStatus = data => http.post('setOfferStatus', data);
 export const downloadContestFile = data =>
-  http.get('/contests/file/' + data.fileName);
+  http.get('contests/file/' + data.fileName);
 export const payMent = data => http.post('contests', data.formData);
 export const changeMark = data => http.post('changeMark', data);
 export const getPreviewChat = () => http.post('getPreview');

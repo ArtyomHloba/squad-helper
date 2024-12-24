@@ -30,13 +30,6 @@ router.use(checkToken.checkToken);
 router.use('/contests', contestsRouter);
 
 router.post(
-  '/setNewOffer',
-  upload.uploadLogoFiles,
-  basicMiddlewares.canSendOffer,
-  contestController.setNewOffer
-);
-
-router.post(
   '/setOfferStatus',
   basicMiddlewares.onlyForCustomerWhoCreateContest,
   contestController.setOfferStatus

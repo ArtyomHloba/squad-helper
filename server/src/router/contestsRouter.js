@@ -45,4 +45,11 @@ contestsRouter.patch(
   contestController.updateContest
 );
 
+contestsRouter.post(
+  '/createOffer',
+  upload.uploadLogoFiles,
+  basicMiddlewares.canSendOffer,
+  contestController.setNewOffer
+);
+
 module.exports = contestsRouter;
