@@ -30,12 +30,6 @@ router.use(checkToken.checkToken);
 router.use('/contests', contestsRouter);
 
 router.post(
-  '/setOfferStatus',
-  basicMiddlewares.onlyForCustomerWhoCreateContest,
-  contestController.setOfferStatus
-);
-
-router.post(
   '/changeMark',
   basicMiddlewares.onlyForCustomer,
   userController.changeMark

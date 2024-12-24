@@ -52,4 +52,10 @@ contestsRouter.post(
   contestController.setNewOffer
 );
 
+contestsRouter.post(
+  '/setOfferStatus',
+  basicMiddlewares.onlyForCustomerWhoCreateContest,
+  contestController.setOfferStatus
+);
+
 module.exports = contestsRouter;

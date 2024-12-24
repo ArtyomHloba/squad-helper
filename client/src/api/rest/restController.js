@@ -7,7 +7,8 @@ export const getUser = () => http.post('getUser');
 export const updateContest = data =>
   http.patch(`contests/${data.get('contestId')}`, data);
 export const setNewOffer = data => http.post('contests/createOffer', data);
-export const setOfferStatus = data => http.post('setOfferStatus', data);
+export const setOfferStatus = data =>
+  http.post('contests/setOfferStatus', data);
 export const downloadContestFile = data =>
   http.get('contests/file/' + data.fileName);
 export const payMent = data => http.post('contests', data.formData);
